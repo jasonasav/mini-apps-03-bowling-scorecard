@@ -5,6 +5,7 @@ class Checkout extends Component {
   constructor(props) {
       super(props);
       this.state = {
+        view: 'frameOne',
           
       };
       
