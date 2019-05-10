@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Scoreinput from './scoreinput.jsx'
 
-class Checkout extends Component {
+class Scoreinput extends Component {
   constructor(props) {
       super(props);
       this.state = {
+          scores: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
           
       };
       
@@ -15,12 +15,13 @@ class Checkout extends Component {
       return (
       
         <div>
-            <h1>Hackerrr Bowling!</h1>
-            <Scoreinput />
+        {this.state.scores.map(score =>
+            <button value={score}>${score}</button>
+        )}        
         </div>
         
       )
   };
 };
 
-export default Checkout;
+export default Scoreinput;
