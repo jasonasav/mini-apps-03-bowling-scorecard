@@ -15,8 +15,9 @@ class Scoreinput extends Component {
       return (
       
         <div>
+            <h2>Input your Score!</h2>
         {this.state.scores.map(score =>
-            <button value={score}>${score}</button>
+            <button value={score}>{score}</button>
         )}        
         </div>
         
