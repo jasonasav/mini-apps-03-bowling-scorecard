@@ -8,6 +8,8 @@ class Scoreinput extends Component {
           currentScore: 0,
           rollCount: 2,
           frame: 1,
+          rollOne: 0,
+          roleTwo: 0
       };
     this.setRemainingScores = this.setRemainingScores.bind(this)
       
@@ -66,11 +68,13 @@ class Scoreinput extends Component {
         <div>
             <h2>Input your Score!</h2>
           {this.state.scores.map(score =>
-            <button key={score} value={score}>{score}</button>
+            <button key={score} value={score}>  {score}  </button>
           )}        
         </div>
       )
   };
 };
+
+// onClick={(e) => props.handleClick(beg)}
 
 export default Scoreinput;
