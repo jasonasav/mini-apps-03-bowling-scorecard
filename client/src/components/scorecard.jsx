@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import Scoreinput from './scoreinput.jsx';
 import Frame from './frame.jsx';
 import Totalscore from './totalescore.jsx';
+import Newframe from './newframe.jsx';
 
 
 class Scorecard extends Component {
   constructor(props) {
       super(props);
       this.state = {
+        rollOne: this.props.rollOne,
+        rollTwo: this.props.rollTwo,
         frameOne: [1, 2],
         frameTwo: [10, 0],
         frameThree: [3, 4],
@@ -31,7 +33,8 @@ class Scorecard extends Component {
         <div>
             <h2>ScoreCard Bowling!</h2>
             <div>
-              <span><Frame key="frameOne" score={this.state.frameOne}/></span> 
+              <Newframe rollOne={this.props.rollOne} rollTwo={this.props.rollTwo} score={this.props.rollOne + this.props.rollTwo}/>
+              {/* <span><Frame key="frameOne" score={this.state.frameOne}/></span> 
               <span><Frame key="frameTwo" score={this.state.frameTwo}/></span> 
               <span><Frame key="frameThree" score={this.state.frameThree}/></span> 
               <span><Frame key="frameFour" score={this.state.frameFour}/></span> 
@@ -40,7 +43,7 @@ class Scorecard extends Component {
               <span><Frame key="frameSeven" score={this.state.frameSeven}/></span> 
               <span><Frame key="frameEight" score={this.state.frameEight}/></span> 
               <span><Frame key="frameNine" score={this.state.frameNine}/></span> 
-              <span><Frame key="frameTen" score={this.state.frameTen}/></span> 
+              <span><Frame key="frameTen" score={this.state.frameTen}/></span>  */}
               <span><Totalscore key="final-score" final={this.state.totaleScore} /></span>
             </div>
             
