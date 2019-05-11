@@ -22,6 +22,7 @@ class Scoreinput extends Component {
   }
 
   setRemainingScores() {
+  let rollCount = this.state.rollCount
   if (rollCount === 2) {
     this.setState({
         scores: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -48,29 +49,24 @@ class Scoreinput extends Component {
   } 
   }
 
-  handleSubmit(e) {
-    this.state.rollCount--
-    if (rollCount === 0) {
-      // set score card value function
-
-    }
-    // set score card value function
-    e.preventDefault();
-    if (e.target.value === 10) {          
-    }
-  
-  
-  
+//   handleSubmit(e) {
     
-  }
+//     if (rollCount === 0) {
+//       // set score card value function
 
+//     }
+//     // set score card value function
+//     e.preventDefault();
+//     if (e.target.value === 10) {          
+//     }    
+//   }
 
   render() {
       return (
         <div>
             <h2>Input your Score!</h2>
           {this.state.scores.map(score =>
-            <button value={score}>{score}</button>
+            <button key={score} value={score}>{score}</button>
           )}        
         </div>
       )

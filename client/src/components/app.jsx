@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Scoreinput from './scoreinput.jsx'
+import Scoreinput from './scoreinput.jsx';
+import Scorecard from './scorecard.jsx';
 
 class Checkout extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Checkout extends Component {
       
         <div>
             <h1>Hackerrr Bowling!</h1>
+            <Scorecard />
             <Scoreinput />
         </div>
         
